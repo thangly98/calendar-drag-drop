@@ -1,0 +1,152 @@
+:root {
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 10px;
+}
+
+.Text_Ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.Calendar_Wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-column-gap: 10px;
+}
+
+.Day_Wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-height: calc(100vh - 20px);
+}
+
+.Day_Name {
+  color: #6a7988;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.Day_Number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #728096;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.Day_Content {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 7px;
+  border-radius: 6px;
+  background-color: #f3f5f880;
+}
+
+.Workout_List {
+  flex: auto;
+  margin-top: 5px;
+}
+
+.Workout_Item_Wrapper {
+  margin-top: 5px;
+  padding: 5px 3px;
+  border-radius: 6px;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  background: rgba(255, 255, 255, 0.8);
+
+  .Workout_Item_Header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 11px;
+    column-gap: 10px;
+
+    .Workout_Item_Name {
+      color: #5a57cb;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .Workout_Item_Action_Button {
+      align-self: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 11px;
+      height: 11px;
+      cursor: pointer;
+    }
+  }
+
+  .Workout_Item_Children {
+    min-height: 10px;
+    .Workout_Child_Item_Wrapper {
+      margin-top: 5px;
+      padding: 5px 9px;
+      border-radius: 3px;
+      border: 1px solid #dfdfdf;
+      background: #fff;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+
+      .Workout_Child_Item_Name {
+        color: #000;
+        text-align: right;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .Workout_Child_Item_Content {
+        display: grid;
+        grid-template-columns: min-content minmax(0, auto);
+        column-gap: 10px;
+        margin-top: 1px;
+
+        .Workout_Child_Item_Time {
+          color: #919cad;
+          font-size: 10px;
+          font-weight: 700;
+        }
+
+        .Workout_Child_Item_Info {
+          color: #95a6b7;
+          text-align: right;
+          font-size: 10px;
+          font-weight: 400;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .Workout_Item_Add_Exercise {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .Workout_Item_Add_Exercise svg {
+    cursor: pointer;
+  }
+}
