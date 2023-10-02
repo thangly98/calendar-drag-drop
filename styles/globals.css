@@ -101,7 +101,7 @@ body {
   .Workout_Item_Children {
     min-height: 10px;
     .Workout_Child_Item_Wrapper {
-      margin-top: 5px;
+      margin-block-start: 5px;
       padding: 5px 9px;
       border-radius: 3px;
       border: 1px solid #dfdfdf;
